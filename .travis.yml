@@ -38,7 +38,7 @@ before_install:
   - yarn --version
 
 install:
-  - yarn install --no-lockfile
+  - yarn install --no-lockfile --non-interactive
 
 script:
   - yarn lint:js
