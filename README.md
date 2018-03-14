@@ -1,50 +1,11 @@
-ember-light-table-cell-type-link
-==============================================================================
+# ember-light-table-cell-type-link
 
-[Short description of the addon.]
+![Ember Versions]([![Ember Versions](https://img.shields.io/badge/Ember.js%20Versions-%5E2.12%20and%20%5E3.0-brightgreen.svg)](https://travis-ci.org/alt3/ember-light-table-cell-type-link)
+[![Build Status](https://travis-ci.org/alt3/.svg)](https://travis-ci.org/alt3/)
+[![npm version](https://badge.fury.io/js/ember-light-table-cell-type-link.svg)](http://badge.fury.io/js/ember-light-table-cell-type-link)
+[![Download Total](https://img.shields.io/npm/dt/ember-light-table-cell-type-link.svg)](http://badge.fury.io/js/ember-light-table-cell-type-link)
+[![Ember Observer Score](https://emberobserver.com/badges/ember-light-table-cell-type-link.svg)](https://emberobserver.com/addons/ember-light-table-cell-type-link)
+[![Greenkeeper badge](https://badges.greenkeeper.io/alt3/ember-light-table-cell-type-link.svg)](https://greenkeeper.io/)
+[![dependencies Status](https://david-dm.org/alt3/ember-light-table-cell-type-link/status.svg)](https://david-dm.org/alt3/ember-light-table-cell-type-link)
 
-Installation
-------------------------------------------------------------------------------
-
-```
-ember install ember-light-table-cell-type-link
-```
-
-
-Usage
-------------------------------------------------------------------------------
-
-[Longer description of how to use the addon in apps.]
-
-
-Contributing
-------------------------------------------------------------------------------
-
-### Installation
-
-* `git clone <repository-url>`
-* `cd ember-light-table-cell-type-link`
-* `npm install`
-
-### Linting
-
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Running tests
-
-* `ember test` – Runs the test suite on the current Ember version
-* `ember test --server` – Runs the test suite in "watch mode"
-* `npm test` – Runs `ember try:each` to test your addon against multiple Ember versions
-
-### Running the dummy application
-
-* `ember serve`
-* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
-
-License
-------------------------------------------------------------------------------
-
-This project is licensed under the [MIT License](LICENSE.md).
+Custom cell type for creating hyperlinks inside your Ember Light Table.
