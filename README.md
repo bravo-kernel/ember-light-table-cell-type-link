@@ -1,6 +1,6 @@
 # ember-light-table-cell-type-link
 
-![Ember Versions]([![Ember Versions](https://img.shields.io/badge/Ember.js%20Versions-%5E2.12%20and%20%5E3.0-brightgreen.svg)](https://travis-ci.org/alt3/ember-light-table-cell-type-link)
+[![Ember Versions](https://img.shields.io/badge/Ember.js%20Versions-%5E2.12%20and%20%5E3.0-brightgreen.svg)](https://travis-ci.org/alt3/ember-light-table-cell-type-link)
 [![Build Status](https://travis-ci.org/alt3/.svg)](https://travis-ci.org/alt3/)
 [![npm version](https://badge.fury.io/js/ember-light-table-cell-type-link.svg)](http://badge.fury.io/js/ember-light-table-cell-type-link)
 [![Download Total](https://img.shields.io/npm/dt/ember-light-table-cell-type-link.svg)](http://badge.fury.io/js/ember-light-table-cell-type-link)
