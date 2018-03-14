@@ -7,6 +7,15 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  // ember-addon-docs required route
+  this.route('docs', function() {
+    this.route('installation');
+    this.route('api', function() {
+      this.route('item', { path: '/*path' });
+    });
+  });
+
+  this.route('not-found', { path: '/*path' });
 });
 
 export default Router;
