@@ -7,7 +7,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  // ember-addon-docs required route
+  // ember-addon-docs required routes
   this.route('docs', function() {
     this.route('installation');
     this.route('api', function() {
