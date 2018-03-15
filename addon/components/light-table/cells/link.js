@@ -9,7 +9,7 @@ import layout from 'ember-light-table-cell-type-link/templates/components/light-
 export default class extends BaseCell.extend({ layout }) {
   willRender() {
     if (isEmpty(this.column.extra.route)) {
-      throw new Error("ember-light-table cell type 'link' requires setting the 'extra.route' attribute");
+      throw new Error("ember-light-table-cell-type-link requires setting the 'extra.route' attribute");
     }
   }
 }
