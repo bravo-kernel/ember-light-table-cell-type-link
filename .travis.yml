@@ -1,47 +1,40 @@
----
 language: node_js
 node_js:
-  - "4"
-
+- '4'
 sudo: false
 dist: trusty
-
 addons:
   chrome: stable
-
 cache:
   yarn: true
-
 env:
   global:
-    # See https://git.io/vdao3 for details.
-    - JOBS=1
+  - JOBS=1
+  - secure: m05Jil/RNOhWgioIjt79S3e6AnU3iZXdhSRmdlxzdFANels7A0soeGuW8gHsgSr7uBC4v262BzRIcPy0WlFRYJzz4BmCw/SbvRQAJZ2i5FLZoUmpxTJFTdHrXWCMKZiq9FgDMMwYjNVwpK3v73EUzD8qxIqHB4BzR3SF4DU/3uAz/O6ZD4uvGLVIMR336tCrN4PGuuhkbeuiiuE/aKJUnvt/hd6uEEmU+KOj04RQa/ZR5ya4N7DxU3r1ucWkQosgkGAW9xqGi1H3ZAalCHR1m9Q/oxE8P+bIB2nLfxvvpgUufwHmbd1d32pBd3QS2RRtGS/oKJ14s/Udi7YN0/jSh5D0gyeFX6WQM6UZIPbeJs28NTuOkhAoiDXMXx2ZGEUeMIpZ58KBH1L46pS+YNVR4SaGo+hDwB4ZuuoB+4AZ8jNGPypGHVK1rc8R6/okV7vAh45TPhrpYXR9sxYXlgiaawup3cVX7nwky+aCGzq2lhDbiR9iYzFNdmzv1u6LRQgAPBs3jOzhb8UwkmQF8YvfFNgApEIcVs1VKD2OKX4oE7F5KliqcEh5zhfuzxRmuQGUrUmT5OD5QqCVKdlTLtK5z288r0V2nTN3nEmYhNtq2OWbYtrV3FqLpTAF/PbNzcnaaJCjeG+MuUaViVdjeN/uMFg5Z7atPLyFFWF2tvuiUxk=
   matrix:
-    # test latest stable, supported LTS's and beta/canary (as a bonus)
-    - EMBER_TRY_SCENARIO=ember-lts-2.12
-    - EMBER_TRY_SCENARIO=ember-lts-2.16
-    - EMBER_TRY_SCENARIO=ember-lts-2.18
-    - EMBER_TRY_SCENARIO=ember-release
-    - EMBER_TRY_SCENARIO=ember-beta
-    - EMBER_TRY_SCENARIO=ember-canary
-    - EMBER_TRY_SCENARIO=ember-default
-
+  - EMBER_TRY_SCENARIO=ember-lts-2.12
+  - EMBER_TRY_SCENARIO=ember-lts-2.16
+  - EMBER_TRY_SCENARIO=ember-lts-2.18
+  - EMBER_TRY_SCENARIO=ember-release
+  - EMBER_TRY_SCENARIO=ember-beta
+  - EMBER_TRY_SCENARIO=ember-canary
+  - EMBER_TRY_SCENARIO=ember-default
 matrix:
   fast_finish: true
   allow_failures:
-    - env: EMBER_TRY_SCENARIO=ember-canary
-    - env: EMBER_TRY_SCENARIO=ember-beta
-
+  - env: EMBER_TRY_SCENARIO=ember-canary
+  - env: EMBER_TRY_SCENARIO=ember-beta
 before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH=$HOME/.yarn/bin:$PATH
-  - yarn --version
-
+- curl -o- -L https://yarnpkg.com/install.sh | bash
+- export PATH=$HOME/.yarn/bin:$PATH
+- yarn --version
+- yarn global add greenkeeper-lockfile@1
 install:
-  - yarn install --no-lockfile --non-interactive
-
+- yarn install --no-lockfile --non-interactive
+before_script:
+- greenkeeper-lockfile-update
 script:
-  - yarn lint:js
-  # Usually, it's ok to finish the test scenario without reverting
-  #  to the addon's original dependency state, skipping "cleanup".
-  - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
+- yarn lint:js
+- node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
+after_script:
+- greenkeeper-lockfile-upload
