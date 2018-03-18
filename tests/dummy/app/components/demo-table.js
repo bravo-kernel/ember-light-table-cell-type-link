@@ -1,8 +1,7 @@
+// BEGIN-SNIPPET demo-table.js
 import { computed } from '@ember/object';
 import Component from '@ember/component';
 import Table from 'ember-light-table';
-
-// note: template MUST be in /app or the dummy crashes
 
 export default Component.extend({
   model: null,
@@ -11,22 +10,16 @@ export default Component.extend({
     return [{
       label: 'First Name',
       valuePath: 'firstName',
-      sortable: false,
-      // changing cellType to componentType the td no longer receives the data (unexpectedly according to docs).
-      // difference explained here https://github.com/offirgolan/ember-light-table/issues/536:
-      // componentType is nested within a TD, cellType is the component that generates the TD
-      cellType: 'link',
+      cellType: 'link', // ember-light-table-cell-type-link
       extra: {
         route: 'user'
       }
     }, {
       label: 'Last Name',
       valuePath: 'lastName',
-      sortable: false
     }, {
       label: 'City',
       valuePath: 'city',
-      sortable: false
     }, {
       label: 'Website',
       valuePath: 'website',
@@ -38,3 +31,4 @@ export default Component.extend({
     return new Table(this.get('columns'), this.get('model'));
   })
 });
+// END-SNIPPET

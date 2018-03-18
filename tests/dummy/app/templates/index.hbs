@@ -1,7 +1,19 @@
-<h2 id="title">Demo page</h2>
-<ul>
-  <li>{{#link-to "docs"}}Documentation{{/link-to}}</li>
-  <li>{{#link-to "docs.api"}}API{{/link-to}}</li>
-</ul>
+{{docs-navbar}}
 
-{{demo-table model=model}}
+{{docs-hero
+  logo='ember'
+  strongHeading='cell-type-link'
+  byline='Custom cell type for creating hyperlinks inside your Ember Light Table.'}}
+
+{{#docs-demo name='docs-demo-basic.hbs' as |demo|}}
+
+  {{!-- Actual demo code --}}
+  {{#demo.example name='demo-table.hbs'}}
+    {{demo-table model=model}}
+  {{/demo.example}}
+
+  {{!-- Snippets --}}
+  {{demo.snippet 'demo-table.hbs' label="demo-table.hbs"}}
+  {{demo.snippet 'demo-table.js' label='demo-table.js'}}
+
+{{/docs-demo}}
