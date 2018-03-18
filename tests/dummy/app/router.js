@@ -7,7 +7,10 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  // ember-addon-docs required routes
+  // demo
+  this.route('user', { path: '/user/:user_id' });
+
+  // ember-addon-docs
   this.route('docs', function() {
     this.route('installation');
     this.route('api', function() {
@@ -15,6 +18,7 @@ Router.map(function() {
     });
   });
 
+  // 404
   this.route('not-found', { path: '/*path' });
 });
 

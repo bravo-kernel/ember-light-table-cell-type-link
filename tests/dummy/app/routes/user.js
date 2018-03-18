@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  model() {
-    return this.get('store').peekAll('user');
+  model(params) {
+    return this.store.peekRecord('user', params.user_id);
   }
 });

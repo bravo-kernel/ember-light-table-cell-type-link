@@ -1,0 +1,24 @@
+{{docs-navbar}}
+
+{{docs-hero
+  logo='ember'
+  strongHeading='cell-type-link'
+  byline='Custom cell type for creating hyperlinks inside your Ember Light Table.'}}
+
+{{#docs-demo name='docs-demo-basic.hbs' as |demo|}}
+
+  {{!-- Actual demo code --}}
+  {{#demo.example name='demo-view-user.hbs'}}
+    <h3>{{model.firstName}} {{model.lastName}}</h3>
+    <ul>
+      <li><strong>id:</strong> {{model.id}}</li>
+      <li><strong>firstName:</strong> {{model.firstName}}</li>
+      <li><strong>lastName:</strong> {{model.lastName}}</li>
+      <li><strong>city:</strong> {{model.city}}</li>
+      <li><strong>website:</strong> {{model.website}}</li>
+    </ul>
+
+    {{#link-to "index"}}Back{{/link-to}}
+  {{/demo.example}}
+
+{{/docs-demo}}
