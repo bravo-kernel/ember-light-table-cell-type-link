@@ -9,23 +9,27 @@ export default Component.extend({
 
   columns: computed(function() {
     return [{
-      label: 'Title',
-      valuePath: 'title',
+      label: 'First Name',
+      valuePath: 'firstName',
       sortable: false,
       // changing cellType to componentType the td no longer receives the data (unexpectedly according to docs).
       // difference explained here https://github.com/offirgolan/ember-light-table/issues/536:
       // componentType is nested within a TD, cellType is the component that generates the TD
       cellType: 'link',
       extra: {
-        route: 'rentals' // as found in the Ember Guide Tutorial
+        route: 'user'
       }
     }, {
-      label: 'Owner',
-      valuePath: 'owner',
+      label: 'Last Name',
+      valuePath: 'lastName',
       sortable: false
     }, {
       label: 'City',
       valuePath: 'city',
+      sortable: false
+    }, {
+      label: 'Website',
+      valuePath: 'website',
       sortable: false
     }];
   }),
