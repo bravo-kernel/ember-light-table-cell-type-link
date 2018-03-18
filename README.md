@@ -9,3 +9,13 @@
 [![dependencies Status](https://david-dm.org/alt3/ember-light-table-cell-type-link/status.svg)](https://david-dm.org/alt3/ember-light-table-cell-type-link)
 
 Custom cell type for creating hyperlinks inside your Ember Light Table.
+
+## Demo/documentation
+
+```bash
+git clone https://github.com/alt3/ember-light-table-cell-type-link.git
+cd ember-light-table-cell-type-link
+yarn install
+ember serve
+```
+Then browse to `http://localhost:4200`
