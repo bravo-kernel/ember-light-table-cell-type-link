@@ -12,7 +12,8 @@ export default Component.extend({
       valuePath: 'firstName',
       cellType: 'link', // ember-light-table-cell-type-link
       extra: {
-        route: 'user'
+        route: 'user', // route as used in your app, row-id passed as :id
+        classNames: "docs-viewer__nav-link"
       }
     }, {
       label: 'Last Name',
@@ -23,7 +24,10 @@ export default Component.extend({
     }, {
       label: 'Website',
       valuePath: 'website',
-      sortable: false
+      cellType: 'link',
+      extra: { // will use cell value as href if `route` is omitted
+        classNames: "docs-viewer__nav-link"
+      }
     }];
   }),
 
