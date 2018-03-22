@@ -1,0 +1,4 @@
+/* Make sure table hyperlink align left-most */
+td .docs-viewer__nav-link {
+  padding-left: 0;
+}
