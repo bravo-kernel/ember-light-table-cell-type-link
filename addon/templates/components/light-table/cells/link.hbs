@@ -1,4 +1,12 @@
-{{!-- .extra attributes set by user in the ELT table definition --}}
-{{#link-to column.extra.route row.id
-  class=column.extra.classNames
-}}{{value}}{{/link-to}}
+{{!--
+  column.extra attributes passed from user's ELT column properties
+--}}
+{{#if column.extra.route}}
+
+  {{#link-to column.extra.route row.id
+    class=column.extra.classNames
+  }}{{value}}{{/link-to}}
+
+{{else}}
+  <a href="{{value}}" class="{{if column.extra.classNames column.extra.classNames}}">{{value}}</a>
+{{/if}}
