@@ -33,7 +33,6 @@ export default Component.extend({
       cellType: 'link',
       extra: {
         type: 'absolute', // uses cell value as `href`
-      extra: { // will use cell value as href if `route` is omitted
         classNames: "docs-viewer__nav-link"
       }
     }];
