@@ -5,14 +5,21 @@ import Table from 'ember-light-table';
 
 export default Component.extend({
   model: null,
+  selectable: false,
 
   columns: computed(function() {
     return [{
+      label: 'ID',
+      valuePath: 'id'
+    }, {
       label: 'First Name',
       valuePath: 'firstName',
-      cellType: 'link', // ember-light-table-cell-type-link
+       // ember-light-table-cell-type-link
+      cellType: 'link',
       extra: {
-        route: 'user'
+        type: 'relative',
+        route: 'user', // route as used in your app, row-id passed as :id
+        classNames: "docs-viewer__nav-link"
       }
     }, {
       label: 'Last Name',
@@ -23,7 +30,11 @@ export default Component.extend({
     }, {
       label: 'Website',
       valuePath: 'website',
-      sortable: false
+      cellType: 'link',
+      extra: {
+        type: 'absolute', // uses cell value as `href`
+        classNames: "docs-viewer__nav-link"
+      }
     }];
   }),
 
