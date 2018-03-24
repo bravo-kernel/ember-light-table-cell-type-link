@@ -1,6 +1,6 @@
 {
   "name": "ember-light-table-cell-type-link",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Custom cell type for creating hyperlinks inside your Ember Light Table.",
   "keywords": [
     "ember-addon",
