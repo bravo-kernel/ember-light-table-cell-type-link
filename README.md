@@ -10,12 +10,5 @@
 
 Custom cell type for creating hyperlinks inside your Ember Light Table.
 
-## Demo/documentation
-
-```bash
-git clone https://github.com/alt3/ember-light-table-cell-type-link.git
-cd ember-light-table-cell-type-link
-yarn install
-ember serve
-```
-Then browse to `http://localhost:4200`
+- [Demo](https://github.io/alt3/ember-light-table-cell-type-link)
+- [Documentation](https://github.io/alt3/ember-light-table-cell-type-link/docs)
