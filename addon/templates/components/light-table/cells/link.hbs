@@ -3,10 +3,15 @@
 --}}
 {{#if column.extra.route}}
 
-  {{#link-to column.extra.route row.id
+  {{#link-to column.extra.route
+    row.id
     class=column.extra.classNames
-  }}{{value}}{{/link-to}}
+  }}
+    {{value}}
+  {{/link-to}}
 
 {{else}}
+
   <a href="{{value}}" class="{{if column.extra.classNames column.extra.classNames}}">{{value}}</a>
+
 {{/if}}
