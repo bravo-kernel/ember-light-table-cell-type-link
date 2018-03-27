@@ -12,7 +12,7 @@ export default Component.extend({
       label: 'ID',
       valuePath: 'id'
     }, {
-      label: 'First Name',
+      label: 'Relative links',
       valuePath: 'firstName',
        // ember-light-table-cell-type-link
       cellType: 'link',
@@ -28,7 +28,7 @@ export default Component.extend({
       label: 'City',
       valuePath: 'city',
     }, {
-      label: 'Website',
+      label: 'Absolute links',
       valuePath: 'website',
       cellType: 'link',
       extra: {
