@@ -11,7 +11,8 @@ export default Component.extend({
     return [{
       label: 'ID',
       valuePath: 'id',
-      sortable: false
+      sortable: false,
+      width: '4%'
     }, {
       label: 'Relative links',
       valuePath: 'firstName',
