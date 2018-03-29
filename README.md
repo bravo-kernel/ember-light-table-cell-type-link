@@ -8,7 +8,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/alt3/ember-light-table-cell-type-link.svg)](https://greenkeeper.io/)
 [![dependencies Status](https://david-dm.org/alt3/ember-light-table-cell-type-link/status.svg)](https://david-dm.org/alt3/ember-light-table-cell-type-link)
 
-Custom cell type for creating hyperlinks inside your Ember Light Table.
+Hyperlink cells for your Ember Light Tables.
 
 [Demo](https://alt3.github.io/ember-light-table-cell-type-link)
 

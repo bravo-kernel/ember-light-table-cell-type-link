@@ -1,6 +1,6 @@
 # Introduction
 
-Easily create cells with hyperlinks inside your Ember Light Tables.
+Hyperlink cells for your Ember Light Tables.
 
 <br>
 
