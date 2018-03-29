@@ -3,5 +3,5 @@
 Install the addon using:
 
 ```bash
-ember install ember install ember-light-table-cell-type-link
+ember install ember-light-table-cell-type-link
 ```
