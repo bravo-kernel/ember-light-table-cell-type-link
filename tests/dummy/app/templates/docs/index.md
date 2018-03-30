@@ -1,3 +1,10 @@
 # Introduction
 
-This addon provides a custom cell type that will allow you to easily create hyperlinks inside your Ember Light Tables.
+Hyperlink cells for your Ember Light Tables.
+
+<br>
+
+Currently supports:
+
+- **relative links:** using your app routes, row-id passed as `:id`
+- **asbolute links:** links to external sites, currently using cell-value

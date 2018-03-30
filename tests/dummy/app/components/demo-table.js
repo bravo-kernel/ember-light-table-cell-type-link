@@ -10,10 +10,13 @@ export default Component.extend({
   columns: computed(function() {
     return [{
       label: 'ID',
-      valuePath: 'id'
+      valuePath: 'id',
+      sortable: false,
+      width: '4%'
     }, {
-      label: 'First Name',
+      label: 'Relative links',
       valuePath: 'firstName',
+      sortable: false,
        // ember-light-table-cell-type-link
       cellType: 'link',
       extra: {
@@ -24,12 +27,15 @@ export default Component.extend({
     }, {
       label: 'Last Name',
       valuePath: 'lastName',
+      sortable: false
     }, {
       label: 'City',
       valuePath: 'city',
+      sortable: false
     }, {
-      label: 'Website',
+      label: 'Absolute links',
       valuePath: 'website',
+      sortable: false,
       cellType: 'link',
       extra: {
         type: 'absolute', // uses cell value as `href`
